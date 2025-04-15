@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { ScrollView, View } from "react-native";
 import { LockIconSvg } from "~/assets/icon/svg.assets";
+import BottomNavigator from "~/components/shared/BottomNavigator";
+import CommonHeader from "~/components/shared/CommonHeader";
+import SidebarModal from "~/components/shared/SidebarModal";
 import { Button } from "~/components/ui/button";
 import { Checkbox } from "~/components/ui/checkbox";
 import { InputField } from "~/components/ui/inputField";
@@ -31,7 +34,10 @@ const Login = () => {
           onToggle={() => setIsChecked(!isChecked)}
           label="Remember me"
         />
+        <CommonHeader />
+        <BottomNavigator />
       </View>
+      <SidebarModal />
     </ScrollView>
   );
 };

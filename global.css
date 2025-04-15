@@ -28,6 +28,8 @@
     --placeholder-color: 240, 2%, 64%, 1;
     --input-border-color: 240, 2%, 91%, 1;
     --theme-color: 180, 76%, 35%, 1;
+    --red-color: 358, 84%, 59%, 1;
+    --light-primary-color: 180, 39%, 94%, 1;
   }
 
   .dark:root {
