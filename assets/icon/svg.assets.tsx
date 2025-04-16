@@ -442,3 +442,36 @@ export const ArrowDownIconSvg = ({ color = "#169F9F" }) => {
     </Svg>
   );
 };
+
+export const PerformanceIconSvg = () => {
+  return (
+    <Svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+      <Path
+        d="M21.333 21.3346V10.668"
+        stroke="black"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <Path
+        d="M16 21.3346L16 14.668"
+        stroke="black"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <Path
+        d="M10.667 21.332L10.667 17.332"
+        stroke="black"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <Path
+        d="M4 27.4V4.6C4 4.26863 4.26863 4 4.6 4H27.4C27.7314 4 28 4.26863 28 4.6V27.4C28 27.7314 27.7314 28 27.4 28H4.6C4.26863 28 4 27.7314 4 27.4Z"
+        stroke="black"
+        strokeWidth="1.5"
+      />
+    </Svg>
+  );
+};

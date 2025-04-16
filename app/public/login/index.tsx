@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ScrollView, View } from "react-native";
 import { LockIconSvg } from "~/assets/icon/svg.assets";
 import HomeMainCard from "~/components/shared/HomeMainCard";
+import ProfileModal from "~/components/shared/ProfileModal";
 import { Button } from "~/components/ui/button";
 import { Checkbox } from "~/components/ui/checkbox";
 import { InputField } from "~/components/ui/inputField";
@@ -34,7 +35,8 @@ const Login = () => {
         />
         {/* <CommonHeader />
         <BottomNavigator /> */}
-        <HomeMainCard />
+        {/* <HomeMainCard /> */}
+        <ProfileModal />
       </View>
       {/* <SidebarModal /> */}
     </ScrollView>
