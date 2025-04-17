@@ -28,6 +28,7 @@ type InputProps = TextInputProps &
     endIcon?: React.ReactNode;
     isPassword?: boolean;
     containerClassName?: string;
+    inputClassName?: string;
   };
 
 const InputField = ({
@@ -38,6 +39,7 @@ const InputField = ({
   isPassword,
   className,
   containerClassName,
+  inputClassName,
   size,
   ...props
 }: InputProps) => {
@@ -54,7 +56,7 @@ const InputField = ({
         <View className="flex-row items-center w-full px-3">
           {startIcon && <View className="mr-2">{startIcon}</View>}
           <TextInput
-            className=" text-base text-[placeholder-color]  w-full"
+            className={` text-base text-[placeholder-color]  w-full ${inputClassName}`}
             secureTextEntry={secure}
             placeholderTextColor="#9CA3AF"
             {...props}
