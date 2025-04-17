@@ -23,16 +23,18 @@ const ProfileModal = () => {
         </View>
         <View className="flex-row gap-2 flex-wrap items-center justify-start w-full">
           <View className="bg-black rounded-full px-[10px] py-[6px]">
-            <Text className="text-xs">Ranch Allocation</Text>
+            <Text className="text-xs text-white">Ranch Allocation</Text>
           </View>
           <View className="bg-black rounded-full px-[10px] py-[6px]">
-            <Text className="text-xs">Plot Subdivision & Merging</Text>
+            <Text className="text-xs text-white">
+              Plot Subdivision & Merging
+            </Text>
           </View>
           <View className="bg-black rounded-full px-[10px] py-[6px]">
-            <Text className="text-xs">Land Exchange</Text>
+            <Text className="text-xs text-white">Land Exchange</Text>
           </View>
           <View className="bg-black rounded-full px-[10px] py-[6px]">
-            <Text className="text-xs">Land Leasing</Text>
+            <Text className="text-xs text-white">Land Leasing</Text>
           </View>
         </View>
         <View className="flex-col">
