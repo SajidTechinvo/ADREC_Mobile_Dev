@@ -4,17 +4,13 @@ import {
   ArrowDownIconSvg,
   BulbIcon,
   CalendarIcon,
-  CommunityCardIcon,
-  DemandIcon,
+  ColorCircleIcon,
   GraphIcon,
   IconLogo,
   NameLogo,
-  PencilIcon,
   SearchIcon,
   StarIcon,
 } from "~/assets/icon/svg.assets";
-import CommunityCard from "~/components/Communitycard/CommunityCard";
-import ActivitiesCard from "~/components/shared/ActivitiesCard";
 import BottomNavigator from "~/components/shared/BottomNavigator";
 import ChallengesCard from "~/components/shared/ChallengesCard";
 import CommonHeader from "~/components/shared/CommonHeader";
@@ -112,14 +108,127 @@ const Services = () => {
                   desProps="Number closed in the past 30 days"
                 />
               </View>
-              <View></View>
+              <View className="mt-2">
+                <View>
+                  <Text className="font-bold text-2xl">Requires Attention</Text>
+                </View>
+                <View className="mt-2">
+                  <View className="border bg-white border-[#F0F3F5] rounded-md py-5 mt-2  px-4">
+                    <View className="flex-row items-center justify-between">
+                      <Text className="text-base font-bold w-[30%]">
+                        Request Ranch...
+                      </Text>
+                      <View className="gap-1">
+                        <Text className="text-base font-bold">
+                          Payment Failed
+                        </Text>
+                        <Text className="text-base">P102839239829</Text>
+                      </View>
+                    </View>
+                    <View className="flex-row items-center pt-2 justify-between">
+                      <View className="gap-1">
+                        <Text className="text-base">Abu Dhabi City</Text>
+                        <ColorCircleIcon />
+                      </View>
+                      <View>
+                        <Text>10 Days Remaining</Text>
+                      </View>
+                    </View>
+                  </View>
+                  <View className="border bg-white border-[#F0F3F5] rounded-md py-5 mt-2  px-4">
+                    <View className="flex-row items-center justify-between">
+                      <Text className="text-base font-bold w-[30%]">
+                        Request Ranch...
+                      </Text>
+                      <View className="gap-1">
+                        <Text className="text-base font-bold">
+                          Plot Required
+                        </Text>
+                        <Text className="text-base">P102839239829</Text>
+                      </View>
+                    </View>
+                    <View className="flex-row items-center pt-2 justify-between">
+                      <View className="gap-1">
+                        <Text className="text-base">Abu Dhabi City</Text>
+                        <ColorCircleIcon />
+                      </View>
+                      <View>
+                        <Text className="text-base color-[#EE3E43] font-bold">
+                          2 Days Remaining
+                        </Text>
+                      </View>
+                    </View>
+                  </View>
+                </View>
+              </View>
+              <View className="mt-7">
+                <View>
+                  <Text className="font-bold text-2xl">In Approval</Text>
+                </View>
+                <View className="mt-2">
+                  <View className="border bg-white border-[#F0F3F5] rounded-md py-5 mt-2  px-4">
+                    <View className="flex-row items-center justify-between">
+                      <Text className="text-base font-bold w-[30%]">
+                        Request Ranch...
+                      </Text>
+                      <View className="gap-1 items-end">
+                        <Text className="text-base font-bold  color-black">
+                          Fahima Ali
+                        </Text>
+                        <Text className="text-base  color-black">
+                          P102839239829
+                        </Text>
+                      </View>
+                    </View>
+                    <View className="flex-row items-center pt-2 justify-between">
+                      <View className="gap-1">
+                        <Text className="text-base  color-black">
+                          Abu Dhabi City
+                        </Text>
+                        <ColorCircleIcon />
+                      </View>
+                      <View>
+                        <Text className="text-base color-black font-bold">
+                          8 Days Remaining
+                        </Text>
+                      </View>
+                    </View>
+                  </View>
+                  <View className="border bg-white border-[#F0F3F5] rounded-md py-5 mt-2  px-4">
+                    <View className="flex-row items-center justify-between">
+                      <Text className="text-base font-bold w-[30%] color-black">
+                        Request Ranch...
+                      </Text>
+                      <View className="gap-1 items-end">
+                        <Text className="text-base font-bold color-black">
+                          Mohammed A
+                        </Text>
+                        <Text className="text-base color-black">
+                          P102839239829
+                        </Text>
+                      </View>
+                    </View>
+                    <View className="flex-row items-center pt-2 justify-between">
+                      <View className="gap-1">
+                        <Text className="text-base">Abu Dhabi City</Text>
+                        <ColorCircleIcon />
+                      </View>
+                      <View>
+                        <Text className="text-base color-black font-bold">
+                          12 Days Remaining
+                        </Text>
+                      </View>
+                    </View>
+                  </View>
+                </View>
+              </View>
             </View>
             <View className="mt-8">
               <View className="flex-row items-center gap-5">
                 <StarIcon />
                 <Text className="font-bold text-2xl">My Favourites</Text>
               </View>
-              <View className="bg-white border border-[#F0F3F5] rounded-md py-5 mt-2 px-4 gap-4">
+              <View className="bg-white border border-[#F0F3F5] rounded-md py-5 mt-5 px-4 gap-4">
                 <View className="bg-slate-200 py-2 px-4 pt-4">
                   <View className="flex-row items-center gap-2 justify-between pb-4">
                     <Text className="text-3xl font-bold">EID Holidays</Text>
@@ -188,7 +297,7 @@ const Services = () => {
                 <BulbIcon />
                 <Text className="font-bold text-2xl">Popular Services</Text>
               </View>
-              <View className="bg-white border border-[#F0F3F5] rounded-md py-5 mt-2 px-4 gap-4 mb-2">
+              <View className="bg-white border border-[#F0F3F5] rounded-md py-5 mt-5 px-4 gap-4 mb-2">
                 <View className="bg-slate-200 py-2 px-4 pt-4">
                   <View className="flex-row  items-center  gap-5  ">
                     <IconLogo />
