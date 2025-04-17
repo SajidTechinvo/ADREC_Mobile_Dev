@@ -1,9 +1,11 @@
 import {
+  Circle,
   ClipPath,
   Defs,
   G,
   LinearGradient,
   Path,
+  RadialGradient,
   Rect,
   Stop,
   Svg,
@@ -475,3 +477,511 @@ export const PerformanceIconSvg = () => {
     </Svg>
   );
 };
+
+export const DemandIcon = () => (
+  <Svg width={32} height={32} fill="none">
+    <Path
+      fill="#6D6D6D"
+      d="M25.894 4.553A1 1 0 0 0 25 4h-6a1 1 0 0 0-.97 1.243l1.932 7.727-.166.53h10.07a.999.999 0 0 0 .028-.947l-4-8Z"
+    />
+    <Path
+      fill="url(#a)"
+      d="M25.894 4.553A1 1 0 0 0 25 4h-6a1 1 0 0 0-.97 1.243l1.932 7.727-.166.53h10.07a.999.999 0 0 0 .028-.947l-4-8Z"
+    />
+    <Path
+      fill="#E8E8E8"
+      d="M6.106 4.553A1 1 0 0 1 7 4h6a1 1 0 0 1 .97 1.243l-1.932 7.727.166.53H2.134a1 1 0 0 1-.028-.947l4-8Z"
+    />
+    <Path
+      fill="url(#b)"
+      d="M6.106 4.553A1 1 0 0 1 7 4h6a1 1 0 0 1 .97 1.243l-1.932 7.727.166.53H2.134a1 1 0 0 1-.028-.947l4-8Z"
+    />
+    <Path
+      fill="#B6B6B6"
+      d="M12.03 4.757A1 1 0 0 1 13 4h6a1 1 0 0 1 .97.757l2 8a1 1 0 0 1-.015.541l-.064.202h-11.78l-.064-.202a1 1 0 0 1-.016-.54l2-8.001Z"
+    />
+    <Path
+      fill="url(#c)"
+      d="M12.03 4.757A1 1 0 0 1 13 4h6a1 1 0 0 1 .97.757l2 8a1 1 0 0 1-.015.541l-.064.202h-11.78l-.064-.202a1 1 0 0 1-.016-.54l2-8.001Z"
+    />
+    <Path
+      fill="url(#d)"
+      d="m19.952 13-4.906 15.702a1 1 0 0 0 1.73.929l13-16A1 1 0 0 0 30 13H19.952Z"
+    />
+    <Path
+      fill="#CACACA"
+      d="M2 13a1 1 0 0 0 .224.63l13 16a1 1 0 0 0 1.73-.928L12.049 13H2Z"
+    />
+    <Path
+      fill="url(#e)"
+      d="M2 13a1 1 0 0 0 .224.63l13 16a1 1 0 0 0 1.73-.928L12.049 13H2Z"
+    />
+    <Path
+      fill="#969696"
+      d="M10 13a1 1 0 0 0 .046.298l5 16a1 1 0 0 0 1.909 0l5-16A1 1 0 0 0 22 13H10Z"
+    />
+    <Path
+      fill="url(#f)"
+      d="M10 13a1 1 0 0 0 .046.298l5 16a1 1 0 0 0 1.909 0l5-16A1 1 0 0 0 22 13H10Z"
+    />
+    <Path
+      fill="url(#g)"
+      fillOpacity={0.7}
+      d="M7 4a1 1 0 0 0-.894.553l-4 8a1 1 0 0 0 .118 1.078l13 16a1 1 0 0 0 1.552 0l13-16a1 1 0 0 0 .118-1.078l-4-8A1 1 0 0 0 25 4H7Z"
+    />
+    <Defs>
+      <LinearGradient
+        id="a"
+        x1={22.286}
+        x2={28.281}
+        y1={4}
+        y2={18.604}
+        gradientUnits="userSpaceOnUse"
+      >
+        <Stop stopColor="#0FAFFF" />
+        <Stop offset={1} stopColor="#102784" />
+      </LinearGradient>
+      <LinearGradient
+        id="b"
+        x1={12.286}
+        x2={7.029}
+        y1={0.042}
+        y2={12.237}
+        gradientUnits="userSpaceOnUse"
+      >
+        <Stop stopColor="#9FF0F9" />
+        <Stop offset={1} stopColor="#29C3FF" />
+      </LinearGradient>
+      <LinearGradient
+        id="c"
+        x1={16}
+        x2={16}
+        y1={4}
+        y2={15.875}
+        gradientUnits="userSpaceOnUse"
+      >
+        <Stop stopColor="#3BD5FF" />
+        <Stop offset={1} stopColor="#367AF2" />
+      </LinearGradient>
+      <LinearGradient
+        id="d"
+        x1={33.529}
+        x2={18.474}
+        y1={4.5}
+        y2={28.812}
+        gradientUnits="userSpaceOnUse"
+      >
+        <Stop stopColor="#1B44B1" />
+        <Stop offset={1} stopColor="#2052CB" />
+      </LinearGradient>
+      <LinearGradient
+        id="e"
+        x1={4.647}
+        x2={14.617}
+        y1={9.6}
+        y2={30.298}
+        gradientUnits="userSpaceOnUse"
+      >
+        <Stop stopColor="#0094F0" />
+        <Stop offset={1} stopColor="#6CE0FF" />
+      </LinearGradient>
+      <LinearGradient
+        id="f"
+        x1={15.992}
+        x2={15.992}
+        y1={7.05}
+        y2={30}
+        gradientUnits="userSpaceOnUse"
+      >
+        <Stop stopColor="#2052CB" />
+        <Stop offset={1} stopColor="#0FAFFF" />
+      </LinearGradient>
+      <LinearGradient
+        id="g"
+        x1={-0.844}
+        x2={21.529}
+        y1={-20.483}
+        y2={32.106}
+        gradientUnits="userSpaceOnUse"
+      >
+        <Stop offset={0.533} stopColor="#FF6CE8" stopOpacity={0} />
+        <Stop offset={1} stopColor="#FF6CE8" />
+      </LinearGradient>
+    </Defs>
+  </Svg>
+);
+export const BadgeIcon = () => (
+  <Svg width={32} height={32} fill="none">
+    <Path
+      fill="url(#a)"
+      d="M10 19.313V29a.999.999 0 0 0 1.515.858L16 27.166l4.485 2.692A1 1 0 0 0 22 29v-9.688A11.45 11.45 0 0 1 16 21c-2.199 0-4.253-.617-6-1.688Z"
+    />
+    <Path
+      fill="url(#b)"
+      d="M22 20a9.96 9.96 0 0 1-6 2 9.96 9.96 0 0 1-6.36-2.283A9.98 9.98 0 0 1 6 12C6 6.477 10.477 2 16 2s10 4.477 10 10a9.99 9.99 0 0 1-4 8Z"
+    />
+    <Path
+      fill="url(#c)"
+      d="m16.337 7.21 1.34 2.72 3.003.434c.307.044.43.422.207.64l-2.171 2.115.513 2.99a.375.375 0 0 1-.544.394L16 15.09l-2.684 1.413a.374.374 0 0 1-.544-.395l.516-2.99-2.174-2.115a.375.375 0 0 1 .207-.639l3.003-.434 1.34-2.72a.376.376 0 0 1 .672 0Z"
+    />
+    <Defs>
+      <RadialGradient
+        id="a"
+        cx={0}
+        cy={0}
+        r={1}
+        gradientTransform="matrix(0 16.8444 -26.4886 0 16 17.645)"
+        gradientUnits="userSpaceOnUse"
+      >
+        <Stop stopColor="#163697" />
+        <Stop offset={1} stopColor="#29C3FF" />
+      </RadialGradient>
+      <RadialGradient
+        id="b"
+        cx={0}
+        cy={0}
+        r={1}
+        gradientTransform="rotate(56.615 44.518 -68.546) scale(111.635 95.6102)"
+        gradientUnits="userSpaceOnUse"
+      >
+        <Stop offset={0.772} stopColor="#FFCD0F" />
+        <Stop offset={0.991} stopColor="#E67505" />
+      </RadialGradient>
+      <RadialGradient
+        id="c"
+        cx={0}
+        cy={0}
+        r={1}
+        gradientTransform="matrix(-4.99988 -16.70782 24.10472 -7.21342 18.5 16.547)"
+        gradientUnits="userSpaceOnUse"
+      >
+        <Stop stopColor="#B03111" />
+        <Stop offset={1} stopColor="#E67505" />
+      </RadialGradient>
+    </Defs>
+  </Svg>
+);
+
+export const PencilIcon = () => (
+  <Svg width={32} height={32} fill="none">
+    <Path
+      fill="url(#a)"
+      d="M2.667 5.333A1.333 1.333 0 0 1 4 4h18.667a1.333 1.333 0 1 1 0 2.667H4a1.333 1.333 0 0 1-1.333-1.334Z"
+    />
+    <Path
+      fill="url(#b)"
+      fillOpacity={0.7}
+      d="M2.667 5.333A1.333 1.333 0 0 1 4 4h18.667a1.333 1.333 0 1 1 0 2.667H4a1.333 1.333 0 0 1-1.333-1.334Z"
+    />
+    <Path
+      fill="url(#c)"
+      d="M2.667 10.667A1.333 1.333 0 0 1 4 9.333h14.667a1.333 1.333 0 1 1 0 2.667H4a1.334 1.334 0 0 1-1.333-1.333Z"
+    />
+    <Path
+      fill="url(#d)"
+      fillOpacity={0.7}
+      d="M2.667 10.667A1.333 1.333 0 0 1 4 9.333h14.667a1.333 1.333 0 1 1 0 2.667H4a1.334 1.334 0 0 1-1.333-1.333Z"
+    />
+    <Path
+      fill="url(#e)"
+      d="M2.667 16A1.333 1.333 0 0 1 4 14.667h10.667a1.333 1.333 0 1 1 0 2.666H4A1.334 1.334 0 0 1 2.667 16Z"
+    />
+    <Path
+      fill="url(#f)"
+      fillOpacity={0.7}
+      d="M2.667 16A1.333 1.333 0 0 1 4 14.667h10.667a1.333 1.333 0 1 1 0 2.666H4A1.334 1.334 0 0 1 2.667 16Z"
+    />
+    <Path
+      fill="url(#g)"
+      d="M4.783 20.47 19.528 5.725l6.747 6.748L11.53 27.219 6.27 25.73l-1.488-5.26Z"
+    />
+    <Path
+      fill="url(#h)"
+      d="M5.255 20a4.133 4.133 0 0 0-1.1 1.968l-1.462 6.136A1 1 0 0 0 3.9 29.308l6.134-1.461a4.134 4.134 0 0 0 1.97-1.1S9.57 26.2 7.685 24.316C5.8 22.429 5.255 20 5.255 20Z"
+    />
+    <Path
+      fill="url(#i)"
+      d="M27.936 4.064a4.773 4.773 0 0 0-6.748 0l-3.075 3.075 6.747 6.746 3.076-3.073a4.773 4.773 0 0 0 0-6.748Z"
+    />
+    <Path
+      fill="url(#j)"
+      d="m17.04 8.213 2.827-2.826s.546 2.43 2.432 4.316c1.885 1.885 4.314 2.43 4.314 2.43l-2.826 2.83s-2.432-.547-4.318-2.431c-1.886-1.887-2.43-4.316-2.43-4.316"
+    />
+    <Defs>
+      <LinearGradient
+        id="a"
+        x1={-0.533}
+        x2={7.141}
+        y1={2.095}
+        y2={22.793}
+        gradientUnits="userSpaceOnUse"
+      >
+        <Stop stopColor="#36DFF1" />
+        <Stop offset={1} stopColor="#0094F0" />
+      </LinearGradient>
+      <LinearGradient
+        id="c"
+        x1={-0.533}
+        x2={7.141}
+        y1={2.095}
+        y2={22.793}
+        gradientUnits="userSpaceOnUse"
+      >
+        <Stop stopColor="#36DFF1" />
+        <Stop offset={1} stopColor="#0094F0" />
+      </LinearGradient>
+      <LinearGradient
+        id="e"
+        x1={-0.533}
+        x2={7.141}
+        y1={2.095}
+        y2={22.793}
+        gradientUnits="userSpaceOnUse"
+      >
+        <Stop stopColor="#36DFF1" />
+        <Stop offset={1} stopColor="#0094F0" />
+      </LinearGradient>
+      <LinearGradient
+        id="g"
+        x1={17.516}
+        x2={20.592}
+        y1={11.291}
+        y2={19.612}
+        gradientUnits="userSpaceOnUse"
+      >
+        <Stop stopColor="#FFA43D" />
+        <Stop offset={1} stopColor="#FB5937" />
+      </LinearGradient>
+      <LinearGradient
+        id="h"
+        x1={1.329}
+        x2={8.059}
+        y1={22.601}
+        y2={29.289}
+        gradientUnits="userSpaceOnUse"
+      >
+        <Stop offset={0.255} stopColor="#FFD394" />
+        <Stop offset={1} stopColor="#FF921F" />
+      </LinearGradient>
+      <LinearGradient
+        id="i"
+        x1={26.987}
+        x2={22.849}
+        y1={5.001}
+        y2={8.891}
+        gradientUnits="userSpaceOnUse"
+      >
+        <Stop stopColor="#F97DBD" />
+        <Stop offset={1} stopColor="#DD3CE2" />
+      </LinearGradient>
+      <LinearGradient
+        id="j"
+        x1={21.993}
+        x2={15.227}
+        y1={11.94}
+        y2={8.981}
+        gradientUnits="userSpaceOnUse"
+      >
+        <Stop stopColor="#FF921F" />
+        <Stop offset={1} stopColor="#FFE994" />
+      </LinearGradient>
+      <RadialGradient
+        id="b"
+        cx={0}
+        cy={0}
+        r={1}
+        gradientTransform="rotate(133.903 3.387 12.661) scale(21.9748 9.68775)"
+        gradientUnits="userSpaceOnUse"
+      >
+        <Stop stopColor="#4A43CB" />
+        <Stop offset={1} stopColor="#4A43CB" stopOpacity={0} />
+      </RadialGradient>
+      <RadialGradient
+        id="d"
+        cx={0}
+        cy={0}
+        r={1}
+        gradientTransform="rotate(133.903 3.387 12.661) scale(21.9748 9.68775)"
+        gradientUnits="userSpaceOnUse"
+      >
+        <Stop stopColor="#4A43CB" />
+        <Stop offset={1} stopColor="#4A43CB" stopOpacity={0} />
+      </RadialGradient>
+      <RadialGradient
+        id="f"
+        cx={0}
+        cy={0}
+        r={1}
+        gradientTransform="rotate(133.903 3.387 12.661) scale(21.9748 9.68775)"
+        gradientUnits="userSpaceOnUse"
+      >
+        <Stop stopColor="#4A43CB" />
+        <Stop offset={1} stopColor="#4A43CB" stopOpacity={0} />
+      </RadialGradient>
+    </Defs>
+  </Svg>
+);
+export const ColorCircleIcon = () => (
+  <Svg width={129} height={20} fill="none">
+    <Circle cx={8} cy={10} r={8} fill="url(#a)" />
+    <Circle cx={28} cy={10} r={8} fill="url(#b)" />
+    <Circle cx={48} cy={10} r={8} fill="url(#c)" opacity={0.4} />
+    <Circle cx={68} cy={10} r={8} fill="url(#d)" opacity={0.4} />
+    <Circle cx={88} cy={10} r={8} fill="url(#e)" opacity={0.4} />
+    <Circle cx={108} cy={10} r={8} fill="url(#f)" opacity={0.4} />
+    <Defs>
+      <LinearGradient
+        id="a"
+        x1={10.389}
+        x2={2.273}
+        y1={2}
+        y2={16.075}
+        gradientUnits="userSpaceOnUse"
+      >
+        <Stop stopColor="#2F9E44" />
+        <Stop offset={1} stopColor="#8CE99A" />
+      </LinearGradient>
+      <LinearGradient
+        id="b"
+        x1={25.611}
+        x2={33.727}
+        y1={18}
+        y2={3.925}
+        gradientUnits="userSpaceOnUse"
+      >
+        <Stop stopColor="#4DABF7" />
+        <Stop offset={1} stopColor="#1971C2" />
+      </LinearGradient>
+      <LinearGradient
+        id="c"
+        x1={50.389}
+        x2={42.273}
+        y1={2}
+        y2={16.075}
+        gradientUnits="userSpaceOnUse"
+      >
+        <Stop stopColor="#D0D0D1" />
+        <Stop offset={1} stopColor="#A0A0A4" />
+      </LinearGradient>
+      <LinearGradient
+        id="d"
+        x1={70.389}
+        x2={62.273}
+        y1={2}
+        y2={16.075}
+        gradientUnits="userSpaceOnUse"
+      >
+        <Stop stopColor="#D0D0D1" />
+        <Stop offset={1} stopColor="#A0A0A4" />
+      </LinearGradient>
+      <LinearGradient
+        id="e"
+        x1={90.389}
+        x2={82.273}
+        y1={2}
+        y2={16.075}
+        gradientUnits="userSpaceOnUse"
+      >
+        <Stop stopColor="#D0D0D1" />
+        <Stop offset={1} stopColor="#A0A0A4" />
+      </LinearGradient>
+      <LinearGradient
+        id="f"
+        x1={110.389}
+        x2={102.273}
+        y1={2}
+        y2={16.075}
+        gradientUnits="userSpaceOnUse"
+      >
+        <Stop stopColor="#D0D0D1" />
+        <Stop offset={1} stopColor="#A0A0A4" />
+      </LinearGradient>
+    </Defs>
+  </Svg>
+);
+
+export const CommunityCardIcon = () => (
+  <Svg width={32} height={32} fill="none">
+    <Path
+      fill="url(#a)"
+      d="M16 29.333c7.364 0 13.333-5.969 13.333-13.333S23.364 2.667 16 2.667 2.667 8.636 2.667 16 8.636 29.333 16 29.333Z"
+    />
+    <Path
+      fill="url(#b)"
+      fillOpacity={0.7}
+      d="M16 29.333c7.364 0 13.333-5.969 13.333-13.333S23.364 2.667 16 2.667 2.667 8.636 2.667 16 8.636 29.333 16 29.333Z"
+    />
+    <Path
+      fill="url(#c)"
+      fillOpacity={0.2}
+      d="M16 29.333c7.364 0 13.333-5.969 13.333-13.333S23.364 2.667 16 2.667 2.667 8.636 2.667 16 8.636 29.333 16 29.333Z"
+    />
+    <Path
+      fill="url(#d)"
+      fillRule="evenodd"
+      d="M12.607 3.102c-.53.713-1.004 1.58-1.416 2.556-.603 1.427-1.09 3.127-1.414 5.009H3.776a13.329 13.329 0 0 0-.599 1.666H9.54A32.666 32.666 0 0 0 9.58 20H3.278c.18.574.397 1.13.65 1.667h5.91c.322 1.749.786 3.333 1.353 4.675.413.975.887 1.842 1.417 2.556 1.107.29 2.248.436 3.393.435a13.334 13.334 0 0 0 3.393-.435c.529-.713 1.004-1.58 1.416-2.556.567-1.342 1.032-2.927 1.354-4.675h5.91c.253-.538.47-1.093.65-1.667H22.42c.16-1.275.247-2.617.247-4 0-1.263-.072-2.492-.207-3.667h6.363a13.324 13.324 0 0 0-.6-1.666h-6c-.324-1.882-.811-3.582-1.414-5.009-.412-.975-.886-1.842-1.416-2.556A13.333 13.333 0 0 0 16 2.667c-1.173 0-2.31.151-3.393.435Zm-1.137 7.565c.303-1.652.737-3.131 1.256-4.36.517-1.224 1.104-2.164 1.698-2.784.598-.623 1.136-.856 1.576-.856.44 0 .977.233 1.575.856.595.62 1.182 1.56 1.699 2.784.52 1.229.953 2.707 1.255 4.36h-9.06ZM16 29.333c.44 0 .977-.233 1.575-.856.595-.62 1.182-1.56 1.699-2.784.484-1.146.893-2.508 1.192-4.026h-8.933c.299 1.518.709 2.88 1.193 4.026.517 1.224 1.104 2.164 1.698 2.784.598.623 1.136.856 1.576.856ZM11 16c0 1.395.093 2.738.26 4h9.48c.167-1.262.26-2.605.26-4 0-1.273-.077-2.503-.218-3.667h-9.564A30.673 30.673 0 0 0 11 16Z"
+      clipRule="evenodd"
+    />
+    <Path
+      fill="url(#e)"
+      d="M18.668 26.975c-.24-.34-.45-.7-.628-1.075-.471-.994-.707-2.094-.707-3.3v-3.85a.553.553 0 0 1 .556-.55 8.59 8.59 0 0 0 3.07-.575c.59-.228 1.158-.508 1.698-.836.347-.21.684-.437 1.01-.679a.56.56 0 0 1 .666 0c.503.373 1.01.697 1.519.97.613.329 1.23.585 1.852.769a8.373 8.373 0 0 0 2.407.351c.307 0 .556.247.556.55v3.85c0 3.667-2.191 6.362-6.464 8.029a.56.56 0 0 1-.406 0c-1.412-.551-2.595-1.214-3.55-1.987a8.872 8.872 0 0 1-.969-.909 7.8 7.8 0 0 1-.61-.758Z"
+    />
+    <Defs>
+      <RadialGradient
+        id="b"
+        cx={0}
+        cy={0}
+        r={1}
+        gradientTransform="rotate(180 12.115 11.437) scale(11.2019)"
+        gradientUnits="userSpaceOnUse"
+      >
+        <Stop stopColor="#003580" />
+        <Stop offset={1} stopColor="#003580" stopOpacity={0} />
+      </RadialGradient>
+      <RadialGradient
+        id="c"
+        cx={0}
+        cy={0}
+        r={1}
+        gradientTransform="rotate(37.278 -21.225 48.022) scale(17.5421 19.0293)"
+        gradientUnits="userSpaceOnUse"
+      >
+        <Stop offset={0.412} stopColor="#1B44B1" />
+        <Stop offset={1} stopColor="#1B44B1" stopOpacity={0} />
+      </RadialGradient>
+      <RadialGradient
+        id="d"
+        cx={0}
+        cy={0}
+        r={1}
+        gradientTransform="rotate(42.397 -19.298 44.568) scale(18.0621 19.2934)"
+        gradientUnits="userSpaceOnUse"
+      >
+        <Stop offset={0.445} stopColor="#3BD5FF" stopOpacity={0} />
+        <Stop offset={0.815} stopColor="#3BD5FF" />
+      </RadialGradient>
+      <LinearGradient
+        id="a"
+        x1={8.593}
+        x2={27.852}
+        y1={7.111}
+        y2={24.889}
+        gradientUnits="userSpaceOnUse"
+      >
+        <Stop stopColor="#29C3FF" />
+        <Stop offset={1} stopColor="#2052CB" />
+      </LinearGradient>
+      <LinearGradient
+        id="e"
+        x1={19.833}
+        x2={30.684}
+        y1={16}
+        y2={30.153}
+        gradientUnits="userSpaceOnUse"
+      >
+        <Stop stopColor="#62BE55" />
+        <Stop offset={1} stopColor="#1E794A" />
+      </LinearGradient>
+    </Defs>
+  </Svg>
+);
