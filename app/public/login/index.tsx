@@ -15,13 +15,13 @@ const Login = () => {
         contentContainerStyle={{ flexGrow: 1 }}
         style={{ flex: 1 }}
       >
-        <View className="relative h-full items-center justify-center bg-white">
+        <View className="relative flex-1 items-center justify-center bg-white">
           <Image
             source={require("../../../assets/images/loginBg.png")}
             className="w-full h-full  absolute top-0 left-0 object-cover -z-0"
             style={{ resizeMode: "cover" }}
           />
-          <View className="bg-white w-[90%] h-[80%] rounded-lg px-[20px] py-[32px]">
+          <View className="bg-white max-h-[600px] w-[90%] flex-1  rounded-lg px-[20px] py-[32px]">
             <View className="flex flex-col gap-4 justify-center items-center">
               <OneHubLogoSvg />
               <Image
