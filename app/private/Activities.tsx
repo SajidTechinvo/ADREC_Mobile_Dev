@@ -20,7 +20,10 @@ const Activities = () => {
           inputClassName="text-white font-bold"
           placeholder="Placeholder"
         />
-        <ScrollView contentContainerStyle={{ paddingBottom: 100, gap: 32 }}>
+        <ScrollView
+          contentContainerStyle={{ paddingBottom: 100, gap: 32 }}
+          showsVerticalScrollIndicator={false}
+        >
           <View className="bg-[#3a3a42] pt-8 w-full">
             <Text className="text-white text-[24px] font-bold ">
               Requires Attention
