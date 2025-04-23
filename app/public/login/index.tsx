@@ -5,6 +5,7 @@ import { Button } from "~/components/ui/button";
 import { Checkbox } from "~/components/ui/checkbox";
 import { InputField } from "~/components/ui/inputField";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
+import { router } from "expo-router";
 
 const Login = () => {
   const [rememberMe, setRememberMe] = useState(false);
@@ -48,13 +49,18 @@ const Login = () => {
                 }}
               />
             </View>
-
-            <View className="pt-[40px] gap-4 ">
+            <View className="pt-[30px] gap-4">
               <View className="flex-row gap-4 w-full justify-center items-center mt-4">
-                <Button variant="default">
+                <Button
+                  variant="default"
+                  className="flex-1"
+                  onPress={() => {
+                    router.navigate("/private/home");
+                  }}
+                >
                   <Text className="text-white"> Login</Text>
-                </Button>{" "}
-                <Button variant={"outline"}>
+                </Button>
+                <Button variant="outline" className="flex-1">
                   <Text className="text-[#169F9F]"> UAE Pass</Text>
                 </Button>
               </View>

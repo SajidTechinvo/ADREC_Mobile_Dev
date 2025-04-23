@@ -1,4 +1,5 @@
-import { Text, View } from "react-native";
+import { router } from "expo-router";
+import { Pressable, Text, View } from "react-native";
 import {
   AdminIconSvg,
   ChallengesIconSvg,
@@ -9,15 +10,27 @@ import {
 
 const BottomNavigator = () => {
   return (
-    <View className="flex-row justify-between items-center bg-white p-2">
-      <View className="flex-col justify-center items-center px-4 gap-2">
-        <HomeIconSvg />
-        <Text className="text-[10px] font-[450]">Home</Text>
-      </View>
-      <View className="flex-col justify-center items-center px-4 gap-2">
-        <ServicesIconSvg />
-        <Text className="text-[10px] font-[450]">Services</Text>
-      </View>
+    <View className="flex-row justify-between items-center bg-white p-2 pb-6">
+      <Pressable
+        onPress={() => {
+          router.navigate("/private/home");
+        }}
+      >
+        <View className="flex-col justify-center items-center px-4 gap-2">
+          <HomeIconSvg />
+          <Text className="text-[10px] font-[450]">Home</Text>
+        </View>
+      </Pressable>
+      <Pressable
+        onPress={() => {
+          router.navigate("/private/services");
+        }}
+      >
+        <View className="flex-col justify-center items-center px-4 gap-2">
+          <ServicesIconSvg />
+          <Text className="text-[10px] font-[450]">Services</Text>
+        </View>
+      </Pressable>
       <View className="flex-col justify-center items-center px-4 gap-2">
         <ManageFileIconSvg />
         <Text className="text-[10px] font-[450]">Manage</Text>
