@@ -1,5 +1,5 @@
 import { cva, VariantProps } from "class-variance-authority";
-import React, { useState } from "react";
+import { useState } from "react";
 import { Pressable, Text, TextInput, TextInputProps, View } from "react-native";
 import { EyeCloseIconSvg, EyeOpenIconSvg } from "~/assets/icon/svg.assets";
 import { cn } from "~/lib/utils";

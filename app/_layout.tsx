@@ -18,6 +18,8 @@ import { enableFreeze } from "react-native-screens";
 import axios from "axios";
 import { AxiosErrorResponse } from "./types & schemas/common.types";
 import { API_BASE_URL } from "./config/baseUrl";
+import { Provider as ReduxProvider } from "react-redux";
+import { store } from "./store";
 
 const LIGHT_THEME: Theme = {
   ...DefaultTheme,
@@ -70,15 +72,17 @@ export default function RootLayout() {
   }
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <ThemeProvider value={isDarkColorScheme ? DARK_THEME : LIGHT_THEME}>
-        <StatusBar style={isDarkColorScheme ? "light" : "dark"} />
-        <Stack
-          screenOptions={{
-            headerShown: false,
-          }}
-        />
-      </ThemeProvider>
-    </QueryClientProvider>
+    <ReduxProvider store={store}>
+      <QueryClientProvider client={queryClient}>
+        <ThemeProvider value={isDarkColorScheme ? DARK_THEME : LIGHT_THEME}>
+          <StatusBar style={isDarkColorScheme ? "light" : "dark"} />
+          <Stack
+            screenOptions={{
+              headerShown: false,
+            }}
+          />
+        </ThemeProvider>
+      </QueryClientProvider>
+    </ReduxProvider>
   );
 }

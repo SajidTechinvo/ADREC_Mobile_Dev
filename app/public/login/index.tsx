@@ -6,6 +6,8 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Image, ScrollView, Text, View } from "react-native";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
+import { useDispatch } from "react-redux";
+import { setUser } from "~/app/store/slices/userSlice";
 import { loginFormSchema } from "~/app/types & schemas/auth/auth.schemas";
 import {
   ICurrentApiResponse,
@@ -24,6 +26,7 @@ import { addSession } from "~/utils/session";
 
 const Login = () => {
   const [rememberMe, setRememberMe] = useState(false);
+  const dispatch = useDispatch();
   const methods = useForm<ILoginFormType>({
     resolver: zodResolver(loginFormSchema),
     defaultValues: {
@@ -41,6 +44,13 @@ const Login = () => {
     ) => {
       if (res?.data) {
         await addSession(res?.data);
+
+        dispatch(
+          setUser({
+            name: "test",
+          })
+        );
+
         router.replace("/private/home");
       }
     },

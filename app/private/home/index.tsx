@@ -11,9 +11,14 @@ import BottomNavigator from "~/components/shared/BottomNavigator";
 import ChallengesCard from "~/components/shared/ChallengesCard";
 import CommonHeader from "~/components/shared/CommonHeader";
 import HomeMainCard from "~/components/shared/HomeMainCard";
+import { useSelector } from "react-redux";
+import { RootState } from "~/app/store";
 
 const Home = () => {
   const { top } = useSafeAreaInsets();
+  const user = useSelector((state: RootState) => state.user);
+  console.log(user);
+
   return (
     <View className="flex-1 bg-[#e8f5f5] px-4 " style={{ paddingTop: top }}>
       <ScrollView showsVerticalScrollIndicator={false}>
