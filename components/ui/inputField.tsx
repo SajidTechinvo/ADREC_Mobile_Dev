@@ -19,18 +19,19 @@ const inputVariants = cva(
     },
   }
 );
-
 type InputProps = TextInputProps &
   VariantProps<typeof inputVariants> & {
     label?: string;
     required?: boolean;
+    hasError?: boolean;
     startIcon?: React.ReactNode;
     endIcon?: React.ReactNode;
     isPassword?: boolean;
     containerClassName?: string;
     inputClassName?: string;
+    errorMessage?: string;
   };
-
+export interface TextfieldPropTypes extends InputProps {}
 const InputField = ({
   label,
   required,
@@ -41,8 +42,10 @@ const InputField = ({
   containerClassName,
   inputClassName,
   size,
+  errorMessage,
+  hasError,
   ...props
-}: InputProps) => {
+}: TextfieldPropTypes) => {
   const [secure, setSecure] = useState(isPassword);
 
   return (
@@ -73,6 +76,9 @@ const InputField = ({
           endIcon && <View className="ml-2">{endIcon}</View>
         )}
       </View>
+      {hasError && !!errorMessage && (
+        <Text className=" ps-1 text-xs text-red-500">{errorMessage}</Text>
+      )}
     </View>
   );
 };
