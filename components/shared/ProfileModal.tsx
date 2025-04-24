@@ -4,54 +4,93 @@ import { CrossIconSvg, PerformanceIconSvg } from "~/assets/icon/svg.assets";
 import { Text } from "../ui/text";
 import { Button } from "../ui/button";
 import { FC } from "react";
+import { useQuery } from "@tanstack/react-query";
+import axios, { AxiosResponse } from "axios";
 
 interface IPropsType {
   open: boolean;
   onClose: VoidFunction;
 }
+export interface IResultResponse {
+  result: IResult;
+  success: boolean;
+  error: any;
+}
+export interface IResult {
+  name: string;
+  desigantion: string;
+  tags: string[];
+  image: string;
+  on_time: OnTime;
+  delays: Delays;
+  one_time: OneTime;
+}
+
+export interface OnTime {
+  percentage: number;
+  count: number;
+  total: number;
+}
+
+export interface Delays {
+  percentage: number;
+  count: number;
+  total: number;
+}
+
+export interface OneTime {
+  percentage: number;
+  count: number;
+  total: number;
+}
 
 const ProfileModal: FC<IPropsType> = ({ open, onClose }) => {
+  const { data: profile } = useQuery({
+    queryKey: ["profile"],
+    queryFn: () => axios.get("/mims-profile/profile"),
+    select: (res: AxiosResponse<IResultResponse>): IResult => {
+      return res.data.result;
+    },
+  });
+
   return (
     <Modal visible={open}>
-      <View className="bg-white pt-24 px-4 flex-1 h-screen">
+      <View className="bg-white mx-4 mt-10  flex-1 h-screen">
         <Pressable
           onPress={() => {
             onClose();
           }}
         >
-          <View className="absolute -top-6 right-0 p-4">
+          <View className="absolute  top-0 right-0 p-4">
             <CrossIconSvg />
           </View>
         </Pressable>
-        <View className="pt-20 flex-col gap-4 justify-center place-items-start">
+        <View className="pt-28  flex-col gap-4 justify-center place-items-start">
           <Image
-            source={require("../../assets/images/dummyAvatar.png")}
+            source={{ uri: profile?.image || "fallback-image-uri" }}
             className="w-[88px] h-[88px] rounded-full"
           />
           <View className="flex-col place-items-start justify-center">
             <Text className="text-[32px] font-bold text-black">
-              Farzana Shah
+              {profile?.name}
             </Text>
             <Text className="text-[20px] font-medium text-black mb-2">
-              Service Agent
+              {profile?.desigantion}
             </Text>
           </View>
-          <View className="flex-row gap-2 flex-wrap items-center justify-start w-full">
-            <View className="bg-black rounded-full px-[10px] py-[6px]">
-              <Text className="text-xs text-white">Ranch Allocation</Text>
-            </View>
-            <View className="bg-black rounded-full px-[10px] py-[6px]">
-              <Text className="text-xs text-white">
-                Plot Subdivision & Merging
-              </Text>
-            </View>
-            <View className="bg-black rounded-full px-[10px] py-[6px]">
-              <Text className="text-xs text-white">Land Exchange</Text>
-            </View>
-            <View className="bg-black rounded-full px-[10px] py-[6px]">
-              <Text className="text-xs text-white">Land Leasing</Text>
-            </View>
+
+          <View className="flex-row gap-2 flex-wrap items-center">
+            {profile?.tags.map((tag, index) => (
+              <View>
+                <View key={index}>
+                  <View className="bg-black rounded-full px-[10px] py-[6px]">
+                    <Text className="text-xs text-white">{tag}</Text>
+                  </View>
+                </View>
+              </View>
+            ))}
           </View>
+
           <View className="flex-col">
             <Button
               variant={"outline"}

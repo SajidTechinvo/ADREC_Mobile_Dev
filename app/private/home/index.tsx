@@ -10,7 +10,7 @@ import ActivitiesCard from "~/components/shared/ActivitiesCard";
 import BottomNavigator from "~/components/shared/BottomNavigator";
 import ChallengesCard from "~/components/shared/ChallengesCard";
 import CommonHeader from "~/components/shared/CommonHeader";
-import HomeMainCard from "~/components/shared/HomeMainCard";
+import HomeMainCard from "~/components/home/HomeMainCard";
 
 const Home = () => {
   const { top } = useSafeAreaInsets();
@@ -27,22 +27,7 @@ const Home = () => {
             <Text className="font-bold  text-2xl">Challenges</Text>
           </View>
           <View className="my-4">
-            <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-              <View className="flex-row gap-4">
-                <ChallengesCard
-                  TitleProps="11 Days"
-                  desProps=" Average time to close applications"
-                />
-                <ChallengesCard
-                  TitleProps="12 Days"
-                  desProps=" Average time to close applications"
-                />
-                <ChallengesCard
-                  TitleProps="13 Days"
-                  desProps=" Average time to close applications"
-                />
-              </View>
-            </ScrollView>
+            <ChallengesCard />
           </View>
         </View>
         <View className="mt-8">
@@ -51,8 +36,6 @@ const Home = () => {
             <Text className="font-bold  text-2xl">My Activities</Text>
           </View>
           <View className="my-4 gap-5">
-            <ActivitiesCard />
-            <ActivitiesCard />
             <ActivitiesCard />
           </View>
         </View>

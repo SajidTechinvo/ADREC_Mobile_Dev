@@ -1,3 +1,4 @@
+import { ActivityIndicator } from "react-native"; // Import spinner component
 import { cva, type VariantProps } from "class-variance-authority";
 import * as React from "react";
 import { Pressable } from "react-native";
@@ -61,12 +62,14 @@ const buttonTextVariants = cva(
 );
 
 type ButtonProps = React.ComponentPropsWithoutRef<typeof Pressable> &
-  VariantProps<typeof buttonVariants>;
+  VariantProps<typeof buttonVariants> & {
+    isLoading?: boolean; // Add isLoading prop
+  };
 
 const Button = React.forwardRef<
   React.ElementRef<typeof Pressable>,
   ButtonProps
->(({ className, variant, size, ...props }, ref) => {
+>(({ className, variant, size, isLoading, children, ...props }, ref) => {
   return (
     <TextClassContext.Provider
       value={buttonTextVariants({
@@ -77,13 +80,18 @@ const Button = React.forwardRef<
     >
       <Pressable
         className={cn(
-          props.disabled && "opacity-50 web:pointer-events-none",
+          props.disabled || isLoading
+            ? "opacity-50 web:pointer-events-none"
+            : "",
           buttonVariants({ variant, size, className })
         )}
         ref={ref}
         role="button"
+        disabled={props.disabled || isLoading}
         {...props}
-      />
+      >
+        {isLoading ? <ActivityIndicator color="white" /> : children}
+      </Pressable>
     </TextClassContext.Provider>
   );
 });
