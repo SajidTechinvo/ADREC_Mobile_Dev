@@ -1,6 +1,6 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
 import { router } from "expo-router";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
@@ -9,14 +9,8 @@ import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view
 import { useDispatch } from "react-redux";
 import { setUser } from "~/store/slices/userSlice";
 import { loginFormSchema } from "~/types & schemas/auth/auth.schemas";
-import {
-  ICurrentApiResponse,
-  ILoginFormType,
-} from "~/types & schemas/auth/auth.types";
-import {
-  AxiosApiSuccessErrorResponse,
-  AxiosErrorResponse,
-} from "~/types & schemas/common.types";
+import { ILoginFormType } from "~/types & schemas/auth/auth.types";
+import { AxiosErrorResponse } from "~/types & schemas/common.types";
 import { LockIconSvg, OneHubLogoSvg } from "~/assets/icon/svg.assets";
 import FormProvider from "~/components/hook-form/FormProvider";
 import RHFTextfield from "~/components/hook-form/RHFTextfield";
@@ -39,9 +33,7 @@ const Login = () => {
   const { mutate: loginUser, isPending: isLoading } = useMutation({
     mutationKey: ["auth/login"],
     mutationFn: (body: ILoginFormType) => axios.post("/dmt/login", body),
-    onSuccess: async (
-      res: AxiosApiSuccessErrorResponse<ICurrentApiResponse, any>
-    ) => {
+    onSuccess: async (res: AxiosResponse<string>) => {
       if (res?.data) {
         await addSession(res?.data);
 
